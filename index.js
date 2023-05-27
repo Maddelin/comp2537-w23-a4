@@ -41,7 +41,7 @@ async function getRandomPokemons(numberOfPairs) {
 const setup = async () => {
     let numberOfPairs = 3
     let pairsLeft = numberOfPairs
-    let duration = 20
+    let duration = 100
 
     let moves = 0
     let correct = 0
