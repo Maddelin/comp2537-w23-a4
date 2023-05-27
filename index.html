@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon Cards</title>
+  <!-- import jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- import bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/journal/bootstrap.min.css" rel="stylesheet">
+
+  <!-- add axios -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="game_intro" class="container text-center">
+    <h1>Gotta Match Them All!</h1><br>
+    <h2>Choose a difficulty level:</h2>
+    <div class="row">
+      <div class="col">
+        <div class="form-check form-check-inline difficulty">
+          <input class="form-check-input" type="radio" name="difficulty" id="easy" checked>
+          <label class="form-check-label" for="easy">
+            Easy
+          </label>
+        </div><br>
+        <div class="form-check form-check-inline difficulty">
+          <input class="form-check-input" type="radio" name="difficulty" id="medium">
+          <label class="form-check-label" for="medium">
+            Medium
+          </label>
+        </div><br>
+        <div class="form-check form-check-inline difficulty">
+          <input class="form-check-input" type="radio" name="difficulty" id="hard">
+          <label class="form-check-label" for="hard">
+            Hard
+          </label>
+        </div>
+      </div>
+    </div>
+    <button id="start_game" class="btn btn-primary">Start Game</button>
+    <button id="reset_game" class="btn btn-secondary">Reset Game</button>
+  </div>
+
+  <div id="game_header" class="container text-center" hidden>
+    <h2>Total Number of Pairs: <span id="numberOfPairsTotal">3</span></h2>
+    <h2>Number of Matches: <span id="numberOfMatches">0</span></h2>
+    <h2>Number of Pairs Left: <span id="numberOfPairsLeft"></span></h2>
+    <h2>Number of Clicks: <span id="numberOfClicks">0</span></h2>
+    <h2>You got <span id="timer"></span> seconds left!</h2>
+  </div>
+
+  <div id="game_environment" class="container text-center mt-4" hidden>
+    <div id="game_grid" class="container justify-content-center">
+    </div>
+    <div class="form-check form-switch form-check-inline mt-4">
+      <input class="form-check-input" type="checkbox" role="switch" id="darkModeToggle">
+      <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+    </div>
+  </div>
+</body>
+
+</html>
